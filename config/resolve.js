@@ -1,13 +1,10 @@
 import path from 'path'
 
 export default {
-    modules: [
-        path.resolve(__dirname),
-        'node_modules'
-    ],
+    modules: [path.resolve(__dirname), 'node_modules'],
     alias: {
         shared: path.resolve('./scripts/shared'),
-        components: path.resolve('./scripts/components')
+        components: path.resolve('./scripts/components'),
     },
-    extensions: ['.js', '.css']
+    extensions: ['.js', '.css', '.vs', '.fs'],
 }

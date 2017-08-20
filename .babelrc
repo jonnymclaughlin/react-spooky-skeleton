@@ -1,9 +1,19 @@
 {
-    "presets": ["es2015", "stage-0"],
-    "plugins": ["transform-decorators-legacy"],
-    "env": {
-        "development": {
-            "plugins": ["transform-decorators-legacy", "transform-runtime"]
-        }
+  "presets": ["es2015", "stage-0", "react"],
+  "plugins": ["babel-plugin-react-require", "transform-decorators-legacy"],
+  "env": {
+      "development": {
+          "plugins": [
+            "transform-decorators-legacy",
+            "transform-runtime",
+            ["react-transform", {
+              "transforms": [{
+                "transform" : "react-transform-hmr",
+                "imports"   : ["react"],
+                "locals"    : ["module"]
+          }]
+        }]
+      ]
     }
+  }
 }
